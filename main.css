@@ -7,9 +7,9 @@ reset
     box-sizing: border-box;
 }
 
-img{
+img {
     display: block;
-    width: 100%;
+    width: 125px;
 }
 
 
@@ -21,17 +21,21 @@ common
     display: flex;
 }
 
-.debug{
+.debug {
     /* display: none; */
     border: 1px dashed #000000; 
 }
 
-.inl{
+.inl {
     display: inline;
 }
 
-.inl-bl{
+.inl-bl {
     display: inline-block;
+}
+
+body {
+    font-family: "Fredoka", sans-serif;
 }
 
 
@@ -42,17 +46,69 @@ common
 
 header {
     text-align: center;
-    font-family: "Fredoka", sans-serif;
     margin: 40px 0 40px;
 }
 
-h1{
+h1 {
     margin-bottom: 40px;
     color:#e53170;
 }
 
 header p {
-    max-width: 70%;
-    font-weight: 300;
+    max-width: 90%;
     margin: 0 auto;
+    font-weight: 300;
+}
+
+/**************** 
+    main
+****************/
+
+.grid {
+    max-width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.col {
+    background-color: #000000;
+    color: #ffffff;
+    width: 325px;
+}
+
+.info {
+    padding: 10px;
+}
+
+.info-child {
+    margin-top: 10px;
+}
+
+.email {
+    color: #5ccbf2;
+}
+
+
+@media screen and (min-width:768px){
+
+    header p {
+        max-width: 80%;
+    }
+
+    .grid {
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width:992px){
+    
+    header p {
+        max-width: 70%;
+    }
+
+    .grid {
+        max-width: 90%;
+    }
 }
