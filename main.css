@@ -1,0 +1,58 @@
+/******** 
+reset 
+********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+
+/******** 
+common
+********/
+
+.container {
+    display: flex;
+}
+
+.debug{
+    /* display: none; */
+    border: 1px dashed #000000; 
+}
+
+.inl{
+    display: inline;
+}
+
+.inl-bl{
+    display: inline-block;
+}
+
+
+/**************** 
+    header
+****************/
+
+
+header {
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    margin: 40px 0 40px;
+}
+
+h1{
+    margin-bottom: 40px;
+    color:#e53170;
+}
+
+header p {
+    max-width: 70%;
+    font-weight: 300;
+    margin: 0 auto;
+}
