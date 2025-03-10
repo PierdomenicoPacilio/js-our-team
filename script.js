@@ -36,3 +36,15 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+for (i = 0; i < teamMembers.length; i++) {
+  document.getElementById('grid').innerHTML += `<div class="container col">
+                                                            <img src="${teamMembers[i].img}" alt="foto Marco">
+                                                            <div class="info">
+                                                                <h5 class="info-child">${teamMembers[i].name}</h5>
+                                                                <p class="info-child">${teamMembers[i].role}</p>
+                                                                <p class="email info-child">${teamMembers[i].email}</p>
+                                                            </div>
+                                                        </div>`
+  console.log(`${teamMembers[i].name} aggiunto`)
+}
