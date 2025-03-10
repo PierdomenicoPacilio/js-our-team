@@ -37,14 +37,31 @@ const teamMembers = [
   }
 ];
 
-for (i = 0; i < teamMembers.length; i++) {
-  document.getElementById('grid').innerHTML += `<div class="container col">
-                                                            <img src="${teamMembers[i].img}" alt="foto Marco">
-                                                            <div class="info">
-                                                                <h5 class="info-child">${teamMembers[i].name}</h5>
-                                                                <p class="info-child">${teamMembers[i].role}</p>
-                                                                <p class="email info-child">${teamMembers[i].email}</p>
-                                                            </div>
-                                                        </div>`
-  console.log(`${teamMembers[i].name} aggiunto`)
-}
+const addMembers = function (array) {
+  document.getElementById('grid').innerHTML = '';
+  for (i = 0; i < array.length; i++) {
+    document.getElementById('grid').innerHTML += `<div class="container col">
+                                                              <img src="${array[i].img}" alt="member photo">
+                                                              <div class="info">
+                                                                  <h5 class="info-child">${array[i].name}</h5>
+                                                                  <p class="info-child">${array[i].role}</p>
+                                                                  <p class="email info-child">${array[i].email}</p>
+                                                              </div>
+                                                          </div>`;
+    console.log(`${array[i].name} aggiunto`);
+  };
+};
+addMembers(teamMembers);
+
+const button = document.getElementById('btn');
+
+button.addEventListener('click', function(event){
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const role = document.getElementById('role').value;
+  const email = document.getElementById('email').value;
+  const img = document.getElementById('img').value;
+  teamMembers.push({name, role, email, img});
+  addMembers(teamMembers);
+  document.getElementById('form').reset();
+});
